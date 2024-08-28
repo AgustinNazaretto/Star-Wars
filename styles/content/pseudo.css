@@ -1,0 +1,38 @@
+/* :pseudoclase Instancia o caracteristica de un elemento (Estado) */
+#sagas article{
+    opacity: .8;
+}
+#sagas article:hover{
+    opacity: 1;
+}
+#sagas article:first-of-type{
+    background-color: #eee;
+}
+#sagas article:last-child{
+    background-color: #ccc;
+}
+/* ::pseudoelemento Parte o elemento dentro de otro elemento */
+article .hidden::first-letter{
+    float: left;
+    padding: 0 .25rem;
+    line-height: 1;
+    font-size: 2.25rem;
+}
+/* Selectores de Atributo */
+[id^="episode"] strong::before{ /*empieza con*/
+    content: "Episodio "
+}
+[id^="episode"] .hidden::before{
+    content: "Hace mucho tiempo en una galaxia muy, muy lejana...";
+    color: #448;
+    font-weight: bold;
+}
+[id^="episode"] .hidden::after{
+    content: "gracias por leer y que la fuerza te acompañe. Saluda atte. LG";
+    display: block;
+    margin-top: .5rem;
+}
+/* No aplica si el div tiene clase hidden  */
+[id^="episode"] div::after{
+    content: "by George Lucas";
+}

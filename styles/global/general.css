@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    /* EXPLICACION 
+        CONTENT-BOX:
+            content-width: width
+            final-width: width + padding + border
+        BORDER-BOX:
+            final-width: width
+            content-width: width - padding - border
+    */
+    font-family: "Raleway", "Open Sans", "calibri", sans-serif;
+    scroll-behavior: smooth;
+}
+/* Reinicio de Estilos */
+body,
+h1,
+h2,
+h3,
+header p,
+.menu,
+.list-unstyled{
+    margin: 0;
+}
+iframe {
+    border: 0;
+}
+.menu,
+.content-table,
+.content-table :is(ul,ol),
+.list-unstyled{
+    padding: 0;
+}
+/* Listas */
+.menu,
+.card,
+.content-table li,
+.list-unstyled{
+    list-style: none
+}
+/* Hipervinculos */
+:is(nav, footer) a{
+    text-decoration: none;
+}

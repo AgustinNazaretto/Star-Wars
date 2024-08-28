@@ -1,0 +1,46 @@
+@keyframes intro {
+  from {
+    transform: rotateX(15deg) translateZ(10rem);
+  }
+}
+@keyframes subtitle {
+  to {
+    margin-top: calc(2vw + 2.5rem);
+    transform: rotateX(-3deg) skew(0) translateX(0);
+  }
+}
+@keyframes glow {
+  to {
+    text-shadow: 0 0 0.5rem #fff;
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: rotate(0) translateY(0);
+  }
+  25% {
+    transform: rotate(-15deg) translateY(-0.25rem);
+  }
+  50% {
+    transform: rotate(0) translateY(0);
+  }
+  75% {
+    transform: rotate(15deg) translateY(-0.25rem);
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+  }
+}

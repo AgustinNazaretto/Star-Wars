@@ -1,0 +1,48 @@
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: min(100vh, 540px);
+    text-align: center;
+    font-size: min(5rem, calc(.8rem + 2vw));
+    /*  TIPOS DE UNIDADES
+        UNIDADES ABSOLUTAS:
+            Son aquellas que siempre valen los mismo indistintamente del medio en el que se visualicen.
+            IDEALES PARA ESTABLECER LIMITES
+            - distancia: mm cm m in
+            - tipografia: pt pc
+            - hibrida: px (depende de la resolucion)
+        UNIDADES RELATIVAS
+            Son aquellas que dependen de otro elemento, generalmente las dimensiones del contenedor o su tipografia.
+            IDEALES PARA DEFINIR CAJA Y FUENTES
+            - contenedor: %
+            - tipografia: % em ex ch
+            - hibrida: rem (depende del contenedor Raiz)
+        UNIDADES FLEXIBLES
+            Son aquellas que toman como referencia al viewport (ventana donde se visualiza la pagina).
+            IDEALES PARA TIPOGRAFIA FLEXIBLE y ALTURA
+            - dimension: vw(width) | vh(height)
+            - relacion: vmin | vmax
+    */
+    background-color: #124;
+    color: #fc3;
+    background: 
+        linear-gradient(
+            hsl(240, 20%, 80%,.3),
+            hsl(240, 20%, 50%,.3),
+            hsl(240, 20%, 30%,.3) /* HSL (Hue, Saturation, Lightness)*/
+        ),
+        url("../../assets/bg/fighter.png") top left/clamp(4rem,20%,320px),
+        url("../../assets/bg/x-wing.png") bottom center/clamp(10rem, 25%,540px),
+        url("../../assets/bg/milleniumfalcon.png") top right/clamp(5rem,25%,720px),
+        url("../../assets/bg/death_star.png") 50% 20%/clamp(10rem,25%, 2000px) fixed,
+        url("../../assets/bg/hyperspace.jpg") center/cover fixed;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 .25rem #333;
+}
+h1,
+h2{
+    font-family: "Jedi", sans-serif;
+    font-weight: lighter;
+    line-height: 1;
+}

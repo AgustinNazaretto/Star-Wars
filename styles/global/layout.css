@@ -1,0 +1,58 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        "nav";
+}
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+#main{
+    grid-area: main;
+}
+#footer{
+    grid-area: footer;
+}
+#sidebar{
+    max-height: 320px;
+    overflow: auto;
+}
+/* Pantallas Medianas - Tablets */
+@media screen and (width >= 768px){
+    body{
+        grid-template-areas: 
+            "nav"
+            "header"
+            "main"
+            "footer";
+    }
+}
+/* Pantallas Grandes - Desktop */
+@media screen and (width >= 1200px){
+    body{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+    #main {
+        display: grid;
+        grid-template-columns: 8fr 3fr;
+    }
+    #main > section{
+        grid-column: 1;
+    }
+    #main > aside {
+        max-height: calc(100vh - 3.5rem);
+        position: sticky;
+        top: 3rem;
+        grid-row: 1 / 3;
+        grid-column: 2;
+    }
+}

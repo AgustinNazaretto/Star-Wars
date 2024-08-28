@@ -1,0 +1,80 @@
+/* Mobile First (Smartphones) */
+nav{
+    position: sticky;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    padding: .5rem max(.5rem, calc(50vw - 660px));
+    background-color: #222;
+}
+nav a{
+    color: #fc3;
+}
+nav button{
+    position: relative;
+    z-index: 1;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+    background: linear-gradient(#666E, #333E);
+    transition: all .5s linear;
+}
+.menu a.active,
+.menu a:hover{
+    color: #ff6;
+    text-shadow: 0 0 .2rem #fca;
+    animation: glow .5s linear alternate infinite;
+}
+.menu.active{
+    left: 0;
+}
+.menu li:is(:first-child,:last-child){
+    display: none;
+}
+/* Animaciones Pseudoelementos */
+.menu a::before{
+    transform-origin: bottom center;
+}
+.menu a:hover::before{
+    animation: bounce .75s linear infinite alternate;
+}
+/* Medium Devices (Tablets)*/
+@media screen and (width >= 768px){
+    nav button{
+        display: none;
+    }
+    .menu{
+        position: static;
+        display: flex;
+        gap: .5rem;
+        width: auto;
+        background-image: unset;
+    }
+}
+@media screen and (width >= 992px){
+    .menu li:is(:first-child, :last-child){
+        display: block;
+    }
+    .menu [class*="icon-"]{
+        flex-direction: row;
+        font-size: .95rem;
+    }
+}
+/* Diseño de Impresion */
+@media print{
+    nav{
+        display: none;
+    }
+}

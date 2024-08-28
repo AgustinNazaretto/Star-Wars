@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header class="intro">
+        <h1>Star Wars</h1>
+        <p>Bienvenido al Sitio Web Oficial</p>
+        <a href="index.html">Ingresar</a>
+    </header>
+    <audio src="./assets/media/star-wars-theme.mp3" autoplay muted></audio>
+    <script>
+        const audio = document.querySelector('audio')
+        const playAudio = () => audio.play()
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('a').focus();
+            audio.muted = false;
+        })
+    </script>
+</body>
+</html>

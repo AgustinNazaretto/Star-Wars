@@ -1,0 +1,61 @@
+/* Estilo de Iconos*/
+.icon, .social a {
+  --color: #ccc;
+  --position: center;
+  --size: 2.5rem;
+  --repeat: no-repeat;
+  background: var(--color) var(--bg) var(--position)/var(--size) var(--repeat);
+}
+.icon:hover, .social a:hover {
+  --color: #fff;
+  --size: 3.25rem;
+  box-shadow: 0 0.25rem 0.5rem #333;
+}
+.icon-dark {
+  --color: #333;
+}
+.icon-primary {
+  --color: #448;
+}
+.icon-cr {
+  --bg: url("/assets/ico/cr.png");
+}
+.icon-facebook {
+  --bg: url("/assets/ico/facebook.png");
+}
+.icon-github {
+  --bg: url("/assets/ico/github.png");
+}
+.icon-instagram {
+  --bg: url("/assets/ico/instagram.png");
+}
+.icon-linkedin {
+  --bg: url("/assets/ico/linkedin.png");
+}
+.icon-twitter {
+  --bg: url("/assets/ico/twitter.png");
+}
+.icon-whatsapp {
+  --bg: url("/assets/ico/whatsapp.png");
+}
+.icon-youtube {
+  --bg: url("/assets/ico/youtube.png");
+}
+
+/* Contenedor Redes sociales*/
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.social a {
+  transition: all 0.5s 0.1s ease-in;
+  
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.25rem;
+}
+.social a:hover {
+  transform: translate(-0.25rem, -0.25rem) rotate(360deg);
+}
